@@ -1,14 +1,14 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import Products from './components/Products'
-import Process from './components/Process'
-import PromoVideo from './components/PromoVideo'
-import Pricing from './components/Pricing'
-import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import WhatsAppFloat from './components/WhatsAppFloat'
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Products from "./components/Products";
+import Process from "./components/Process";
+import PromoVideo from "./components/PromoVideo";
+import Pricing from "./components/Pricing";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function App() {
   return (
@@ -20,12 +20,12 @@ export default function App() {
         <Products />
         <Process />
         <PromoVideo />
-        <Pricing />
+        {/* <Pricing /> */}
         <Testimonials />
         <Contact />
       </main>
       <Footer />
       <WhatsAppFloat />
     </div>
-  )
+  );
 }

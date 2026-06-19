@@ -1,11 +1,45 @@
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   const links = {
-    Produk: ['Bendera Promosi', 'Umbul-Umbul', 'X-Banner', 'Bendera Custom', 'Bendera Merah Putih'],
-    Layanan: ['Cetak Ekspres', 'Desain Gratis', 'Pengiriman Nasional', 'Konsultasi'],
-    Perusahaan: ['Tentang Kami', 'Blog', 'Karir', 'Kontak'],
-  }
+    Produk: [
+      "Bendera Promosi",
+      "Umbul-Umbul",
+      "X-Banner",
+      "Bendera Custom",
+      "Bendera Merah Putih",
+    ],
+    Layanan: [
+      "Cetak Ekspres",
+      "Desain Gratis",
+      "Pengiriman Nasional",
+      "Konsultasi",
+    ],
+    Perusahaan: ["Tentang Kami", "Blog", "Karir", "Kontak"],
+  };
+
+  const socials = [
+    {
+      name: "fb",
+      href: "https://facebook.com/yourpage",
+    },
+    {
+      name: "ig",
+      href: "https://instagram.com/yourpage",
+    },
+    {
+      name: "tw",
+      href: "https://x.com/yourpage",
+    },
+    {
+      name: "yt",
+      href: "https://youtube.com/@yourchannel",
+    },
+    {
+      name: "tt",
+      href: "https://www.tiktok.com/@pabrik.sablon.kis",
+    },
+  ];
 
   return (
     <footer className="bg-brand-dark border-t border-white/10">
@@ -25,17 +59,19 @@ export default function Footer() {
               </span>
             </a>
             <p className="font-body text-white/50 text-sm leading-relaxed max-w-xs mb-6">
-              Jasa cetak bendera berkualitas tinggi dengan pengiriman cepat ke seluruh Indonesia.
-              Harga terjangkau, hasil premium.
+              Jasa cetak bendera berkualitas tinggi dengan pengiriman cepat ke
+              seluruh Indonesia. Harga terjangkau, hasil premium.
             </p>
             <div className="flex gap-3">
-              {['fb', 'ig', 'tw', 'yt'].map((s) => (
+              {socials.map((social) => (
                 <a
-                  key={s}
-                  href="#"
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-brand-red transition-colors text-white/60 hover:text-white text-xs font-display font-bold uppercase"
                 >
-                  {s}
+                  {social.name}
                 </a>
               ))}
             </div>
@@ -44,7 +80,9 @@ export default function Footer() {
           {/* Links */}
           {Object.entries(links).map(([title, items]) => (
             <div key={title}>
-              <h4 className="font-display font-bold text-white text-sm mb-4">{title}</h4>
+              <h4 className="font-display font-bold text-white text-sm mb-4">
+                {title}
+              </h4>
               <ul className="space-y-2.5">
                 {items.map((item) => (
                   <li key={item}>
@@ -67,8 +105,12 @@ export default function Footer() {
             © {year} CetakBendera Pro. Hak cipta dilindungi.
           </p>
           <div className="flex gap-6">
-            {['Kebijakan Privasi', 'Syarat & Ketentuan', 'Sitemap'].map((l) => (
-              <a key={l} href="#" className="font-body text-white/30 hover:text-white/60 text-sm transition-colors">
+            {["Kebijakan Privasi", "Syarat & Ketentuan", "Sitemap"].map((l) => (
+              <a
+                key={l}
+                href="#"
+                className="font-body text-white/30 hover:text-white/60 text-sm transition-colors"
+              >
                 {l}
               </a>
             ))}
@@ -76,5 +118,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = '6281234567890' // Ganti dengan nomor WhatsApp kamu
+const WHATSAPP_NUMBER = "6281211111055"; // Ganti dengan nomor WhatsApp kamu
 
 export default function WhatsAppFloat() {
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Halo,%20saya%20ingin%20memesan%20bendera.%20Bisa%20info%20lebih%20lanjut?`
+  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Halo,%20saya%20ingin%20memesan%20bendera.%20Bisa%20info%20lebih%20lanjut?`;
 
   return (
     <a
@@ -18,5 +18,5 @@ export default function WhatsAppFloat() {
         Chat Sekarang
       </span>
     </a>
-  )
+  );
 }
